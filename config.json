@@ -1,0 +1,37 @@
+{
+  "name": "dgc",
+  "cores": 1,
+  "repos": [
+    {
+      "name": "mongo",
+      "config": {
+        "url": "mongodb://localhost:27017",
+        "db": "dgc",
+        "timeout": 15
+      }
+    },
+    {
+      "name": "redis",
+      "config": {
+        "url": "192.168.28.239:6379",
+        "timeout": 15
+      }
+
+    }
+  ],
+  "middles":[
+    {
+      "name": "MdRoom"
+    }
+  ],
+  "transports": [
+    {
+      "name": "tsWs",
+      "config": {
+        "addr": ":8080",
+        "pattern": "/chat",
+        "msgType": 1
+      }
+    }
+  ]
+}
